@@ -1,7 +1,7 @@
 # Bài tập lớn OOP - Bomberman Game 2022-2023
 # Nhóm 8:
- - Trần Đình Tuấn Anh, MSV :
- - Nguyễn Đăng Hải
+ - Trần Đình Tuấn Anh, MSV : 21020280
+ - Nguyễn Đăng Hải, MSV :
 
 ## Mô tả về các đối tượng trong trò chơi
 - ![](res/sprites/player_down.png) *Bomber* là nhân vật chính của trò chơi. Bomber có thể di chuyển theo 4 hướng trái/phải/lên/xuống theo sự điều khiển của người chơi. 
