@@ -3,7 +3,6 @@ package uet.oop.bomberman.controller;
 import uet.oop.bomberman.controller.Direction.DIRECTION;
 import uet.oop.bomberman.entities.Bomb;
 import uet.oop.bomberman.entities.Entity;
-import uet.oop.bomberman.entities.Obstacle;
 import uet.oop.bomberman.graphics.Map;
 import uet.oop.bomberman.graphics.Sprite;
 
@@ -18,5 +17,5 @@ public class CollisionManager {
     public CollisionManager(Map map) {
         this.map = map;
     }
-    
+
 }
