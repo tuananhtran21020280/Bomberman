@@ -137,7 +137,7 @@ public abstract class Enemy extends Character {
         if(!_alive) return;
         _alive = false;
 
-        Sound.play("AA126_11");
+        Sound.play("enemyDead");
     }
 
 

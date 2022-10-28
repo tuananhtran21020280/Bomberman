@@ -89,20 +89,19 @@ public class Screen {
 		g.setColor(Color.red);
 		g.fillRect(0, 0, getRealWidth(), getRealHeight());
 
-		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
+		Font font = new Font("Colonna MT", Font.PLAIN, 20 * Game.SCALE);
 		g.setFont(font);
-		g.setColor(Color.white);
+		g.setColor(Color.black);
 		drawCenteredString("GAME OVER", getRealWidth(), getRealHeight(), g);
 
-		font = new Font("Arial", Font.PLAIN, 10 * Game.SCALE);
 	}
 	public void drawLevel(Graphics g, int level) {
-		g.setColor(Color.black);
+		g.setColor(Color.yellow);
 		g.fillRect(0, 0, getRealWidth(), getRealHeight());
 		
 		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
 		g.setFont(font);
-		g.setColor(Color.white);
+		g.setColor(Color.pink);
 		drawCenteredString("WELCOME " , getRealWidth(), getRealHeight(), g);
 
 	}
