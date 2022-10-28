@@ -14,6 +14,7 @@ public class Oneal extends Enemy {
 
         _ai = new AILow();
         _direction = _ai.calculateDirection();
+        //this._speed += random.nextDouble()/2;
 
     }
 
