@@ -28,7 +28,6 @@ public class Balloon extends Enemy {
                 _sprite = Sprite.movingSprite(Sprite.balloom_right1, Sprite.balloom_right2, Sprite.balloom_right3, _animate, 60);
                 break;
             case 2:
-            case 3:
                 _sprite = Sprite.movingSprite(Sprite.balloom_left1, Sprite.balloom_left2, Sprite.balloom_left3, _animate, 60);
                 break;
         }
