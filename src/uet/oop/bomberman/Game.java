@@ -29,6 +29,9 @@ public class Game extends Canvas {
     private static final int BOMBRADIUS = 1;
     private static final double BOMBERSPEED = 1.0;//toc do bomber
 
+    public static final int TIME = 200;
+    public static final int POINTS = 0;
+
     protected static int SCREENDELAY = 3;
 
     protected static int bombRate = BOMBRATE;
@@ -111,7 +114,7 @@ public class Game extends Canvas {
 
         long  lastTime = System.nanoTime();
         long timer = System.currentTimeMillis();
-        final double ns = 1000000000.0 / 70.0;
+        final double ns = 1000000000.0 / 60.0; //nanosecond, 60 frames per second
         double delta = 0;
         int frames = 0;
         int updates = 0;
@@ -140,8 +143,6 @@ public class Game extends Canvas {
 
             frames++;
             if(System.currentTimeMillis() - timer > 1000) {
-
-                timer += 1000;
                 _frame.setTitle(TITLE + " | " + updates + " rate, " + frames + " fps");
                 updates = 0;
                 frames = 0;
@@ -182,6 +183,10 @@ public class Game extends Canvas {
 
     public Board getBoard() {
         return _board;
+    }
+
+    public boolean isPaused() {
+        return _paused;
     }
 
     public void pause() {

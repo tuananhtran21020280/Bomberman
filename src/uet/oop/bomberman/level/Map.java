@@ -22,6 +22,11 @@ import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
 
 public class Map extends LevelLoader {
+
+    /**
+     * Ma trận chứa thông tin bản đồ, mỗi phần tử lưu giá trị kí tự đọc được từ
+     * ma trận bản đồ trong tệp cấu hình
+     */
     private static char[][] _map;
 
     public Map(Board board, int level) throws LoadLevelException {
@@ -94,13 +99,14 @@ public class Map extends LevelLoader {
                                 )
                         );
                         break;
-
+                    // Thêm Bomber
                     case 'p':
                         _board.addCharacter(new Bomber(Coordinates.tileToPixel(x), Coordinates.tileToPixel(y) + Game.TILES_SIZE, _board));
                         Screen.setOffset(0, 0);
                         _board.addEntity(x + y * _width, new Grass(x, y, Sprite.grass));
                         break;
 
+                    // Thêm balloon
                     case '1':
                         _board.addCharacter(new Balloon(Coordinates.tileToPixel(x), Coordinates.tileToPixel(y) + Game.TILES_SIZE, _board));
                         _board.addEntity(x + y * _width, new Grass(x, y, Sprite.grass));
@@ -110,7 +116,7 @@ public class Map extends LevelLoader {
                         _board.addCharacter(new Oneal(Coordinates.tileToPixel(x), Coordinates.tileToPixel(y) + Game.TILES_SIZE, _board));
                         _board.addEntity(pos, new Grass(x, y, Sprite.grass));
                         break;
-
+                    // Thêm BomItem
                     case 'b':
                         LayeredEntity layer = new LayeredEntity(x, y,
                                 new Grass(x, y, Sprite.grass),
@@ -118,7 +124,7 @@ public class Map extends LevelLoader {
                                 new Brick(x, y, Sprite.brick));
                         _board.addEntity(pos, layer);
                         break;
-
+                    // Thêm SpeedItem
                     case 's':
                         layer = new LayeredEntity(x, y,
                                 new Grass(x, y, Sprite.grass),
@@ -126,7 +132,7 @@ public class Map extends LevelLoader {
                                 new Brick(x, y, Sprite.brick));
                         _board.addEntity(pos, layer);
                         break;
-
+                    // Thêm FlameItem
                     case 'f':
                         layer = new LayeredEntity(x, y,
                                 new Grass(x, y, Sprite.grass),
