@@ -9,7 +9,7 @@ import uet.oop.bomberman.exceptions.LoadLevelException;
 import uet.oop.bomberman.graphics.IRender;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.input.Keyboard;
-import uet.oop.bomberman.level.FileLevelLoader;
+import uet.oop.bomberman.level.Map;
 import uet.oop.bomberman.level.LevelLoader;
 
 import java.awt.*;
@@ -78,7 +78,7 @@ public class Board implements IRender {
         _bombs.clear();
 
         try {
-            _levelLoader = new FileLevelLoader(this, level);
+            _levelLoader = new Map(this, level);
             _entities = new Entity[_levelLoader.getHeight() * _levelLoader.getWidth()];
 
             _levelLoader.createEntities();

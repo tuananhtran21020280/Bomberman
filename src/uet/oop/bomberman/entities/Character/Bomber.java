@@ -71,15 +71,8 @@ public class Bomber extends Character {
         Screen.setOffset(xScroll, 0);
     }
 
-    /**
-     * Kiểm tra xem có đặt được bom hay không? nếu có thì đặt bom tại vị trí hiện tại của Bomber
-     */
     private void detectPlaceBomb() {
-        // TODO: kiểm tra xem phím điều khiển đặt bom có được gõ và giá trị _timeBetweenPutBombs, Game.getBombRate() có thỏa mãn hay không
-        // TODO:  Game.getBombRate() sẽ trả về số lượng bom có thể đặt liên tiếp tại thời điểm hiện tại
-        // TODO: _timeBetweenPutBombs dùng để ngăn chặn Bomber đặt 2 Bomb cùng tại 1 vị trí trong 1 khoảng thời gian quá ngắn
-        // TODO: nếu 3 điều kiện trên thỏa mãn thì thực hiện đặt bom bằng placeBomb()
-        // TODO: sau khi đặt, nhớ giảm số lượng Bomb Rate và reset _timeBetweenPutBombs về 0
+
         if(_input.space && Game.getBombRate() > 0 && _timeBetweenPutBombs < 0) {
 
             int xt = Coordinates.pixelToTile(_x + _sprite.getSize() / 2);
@@ -117,7 +110,7 @@ public class Bomber extends Character {
     public void kill() {
         if (!_alive) return;
         _alive = false;
-        Sound.play("endgame3");
+        Sound.play("Over");
     }
 
     @Override

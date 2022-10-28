@@ -21,15 +21,10 @@ import uet.oop.bomberman.exceptions.LoadLevelException;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
 
-public class FileLevelLoader extends LevelLoader {
-
-    /**
-     * Ma trận chứa thông tin bản đồ, mỗi phần tử lưu giá trị kí tự đọc được từ
-     * ma trận bản đồ trong tệp cấu hình
-     */
+public class Map extends LevelLoader {
     private static char[][] _map;
 
-    public FileLevelLoader(Board board, int level) throws LoadLevelException {
+    public Map(Board board, int level) throws LoadLevelException {
         super(board, level);
     }
 
