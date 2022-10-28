@@ -86,7 +86,7 @@ public class Screen {
 	}
 	
 	public void drawEndGame(Graphics g) {
-		g.setColor(Color.black);
+		g.setColor(Color.red);
 		g.fillRect(0, 0, getRealWidth(), getRealHeight());
 
 		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);

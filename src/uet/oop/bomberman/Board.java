@@ -71,7 +71,7 @@ public class Board implements IRender {
     }
 
     public void loadLevel(int level) {
-        _screenToShow = 1;
+        _screenToShow = 2;
         _game.resetScreenDelay();
         _game.pause();
         _characters.clear();
@@ -88,7 +88,7 @@ public class Board implements IRender {
     }
 
     public void endGame() {
-        _screenToShow = 3;
+        _screenToShow = 1;
         _game.resetScreenDelay();
         _game.pause();
     }
