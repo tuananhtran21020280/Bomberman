@@ -143,9 +143,6 @@ public class Game extends Canvas {
 
             frames++;
             if(System.currentTimeMillis() - timer > 1000) {
-                _frame.setTitle(TITLE + " | " + updates + " rate, " + frames + " fps");
-                updates = 0;
-                frames = 0;
 
                 if(_board.getShow() == 2)
                     --_screenDelay;
