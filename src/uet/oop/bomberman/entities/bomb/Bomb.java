@@ -12,8 +12,8 @@ import uet.oop.bomberman.level.Coordinates;
 import uet.oop.bomberman.sound.Sound;
 public class Bomb extends AnimatedEntitiy {
 
-    protected double _timeToExplode = 120; //2 seconds - thoi gian phat no
-    public int _timeAfter = 20;// thoi gian de no
+    protected double _timeToExplode = 120;
+    public int _timeAfter = 20;
 
     protected Board _board;
     protected uet.oop.bomberman.entities.bomb.Flame[] _flames;
@@ -75,12 +75,10 @@ public class Bomb extends AnimatedEntitiy {
     protected void explode() {//nổ
         _exploded = true;
         _allowedToPassThru = true;
-        // Xử lý khi Character đứng tại vị trí Bomb.
         Character x = _board.getCharacterAtExcluding((int)_x, (int)_y, null);
         if(x != null){
             x.kill();
         }
-        // Tạo các Flame
         _flames = new uet.oop.bomberman.entities.bomb.Flame[4];
         for (int i = 0; i < _flames.length; i++) {
             _flames[i] = new uet.oop.bomberman.entities.bomb.Flame((int) _x, (int) _y, i, Game.getBombRadius(), _board);
@@ -104,14 +102,13 @@ public class Bomb extends AnimatedEntitiy {
 
     @Override
     public boolean collide(Entity e) {
-        // Xử lý khi Bomber đi ra sau khi vừa đặt bom (_allowedToPassThru)
 
         if(e instanceof Bomber) {
             double diffX = e.getX() - Coordinates.tileToPixel(getX());
             double diffY = e.getY() - Coordinates.tileToPixel(getY());
 
-            if(!(diffX >= -10 && diffX < 16 && diffY >= 1 && diffY <= 28)) { // differences to see if the player has moved out of the bomb, tested values
-                _allowedToPassThru = false;
+            if(!(diffX >= -10 && diffX < 16 && diffY >= 1 && diffY <= 28)) {
+                _allowedToPassThru=false;
             }
 
             return _allowedToPassThru;
