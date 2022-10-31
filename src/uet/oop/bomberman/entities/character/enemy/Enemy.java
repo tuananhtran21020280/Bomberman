@@ -6,12 +6,11 @@ import uet.oop.bomberman.entities.Entity;
 import uet.oop.bomberman.entities.bomb.Flame;
 import uet.oop.bomberman.entities.character.Bomber;
 import uet.oop.bomberman.entities.character.Character;
-import uet.oop.bomberman.entities.character.enemy.ai.AI;
+import uet.oop.bomberman.entities.character.enemy.enemyMove.Move;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
 import uet.oop.bomberman.level.Coordinates;
 
-import java.awt.*;
 import uet.oop.bomberman.sound.Sound;
 
 public abstract class Enemy extends Character {
@@ -19,7 +18,7 @@ public abstract class Enemy extends Character {
     protected int _points;
 
     protected double _speed;
-    protected AI _ai;
+    protected Move _Move;
 
     protected final double MAX_STEPS;
     protected final double rest;
@@ -77,7 +76,7 @@ public abstract class Enemy extends Character {
 
         int xa = 0, ya = 0;
         if(_steps <= 0){
-            _direction = _ai.calculateDirection();
+            _direction = _Move.calculateDirection();
             _steps = MAX_STEPS;
         }
 

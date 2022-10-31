@@ -29,7 +29,7 @@ public class Board implements IRender {
     public Entity[] _entities;
     public List<Character> _characters = new ArrayList<>();
     protected List<Bomb> _bombs = new ArrayList<>();
-    private int _screenToShow = -1; //1:endgame, 2:changelevel, 3:paused
+    private int _screenToShow = -1;
 
     public Board(Game game, Keyboard input, Screen screen) {
         _game = game;
@@ -93,7 +93,7 @@ public class Board implements IRender {
         _game.pause();
     }
 
-    public boolean detectNoEnemies() {// phat hien enemies
+    public boolean detectNoEnemies() {
         int total = 0;
         for (int i = 0; i < _characters.size(); i++) {
             if(_characters.get(i) instanceof Bomber == false)

@@ -2,7 +2,7 @@ package uet.oop.bomberman.entities.character.enemy;
 
 
 import uet.oop.bomberman.Board;
-import uet.oop.bomberman.entities.character.enemy.ai.AILow;
+import uet.oop.bomberman.entities.character.enemy.enemyMove.MoveOneal;
 import uet.oop.bomberman.graphics.Sprite;
 
 public class Oneal extends Enemy {
@@ -12,8 +12,8 @@ public class Oneal extends Enemy {
 
         _sprite = Sprite.balloom_left1;
 
-        _ai = new AILow();
-        _direction = _ai.calculateDirection();
+        _Move = new MoveOneal(_board.getBomber(), this);
+        _direction = _Move.calculateDirection();
         //this._speed += random.nextDouble()/2;
 
     }

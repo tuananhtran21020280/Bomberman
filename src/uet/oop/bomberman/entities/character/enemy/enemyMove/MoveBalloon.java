@@ -1,6 +1,6 @@
-package uet.oop.bomberman.entities.character.enemy.ai;
+package uet.oop.bomberman.entities.character.enemy.enemyMove;
 
-public class AILow extends AI {
+public class MoveBalloon extends Move {
 
 	@Override
 	public int calculateDirection() {

@@ -1,10 +1,7 @@
 package uet.oop.bomberman.entities.character.enemy;
 
-import static java.lang.Math.random;
-import java.util.Random;
 import uet.oop.bomberman.Board;
-import uet.oop.bomberman.Game;
-import uet.oop.bomberman.entities.character.enemy.ai.AILow;
+import uet.oop.bomberman.entities.character.enemy.enemyMove.MoveBalloon;
 import uet.oop.bomberman.graphics.Sprite;
 
 public class Balloon extends Enemy {
@@ -15,8 +12,8 @@ public class Balloon extends Enemy {
 
         _sprite = Sprite.balloom_left1;
 
-        _ai = new AILow();
-        _direction = _ai.calculateDirection();
+        _Move = new MoveBalloon();
+        _direction = _Move.calculateDirection();
 
     }
 
