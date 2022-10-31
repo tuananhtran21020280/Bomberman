@@ -27,8 +27,11 @@ public class Portal extends Tile {
 
             if(e.getXTile() == getX() && e.getYTile() == getY()) {
                 if(_board.detectNoEnemies()){
-                    Sound.play("CRYST_UP");
+                    Sound.play("Winner");
                 }
+
+                System.exit(1);
+
             }
 
             return true;

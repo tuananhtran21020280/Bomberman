@@ -96,12 +96,12 @@ public class Screen {
 
 	}
 	public void drawLevel(Graphics g, int level) {
-		g.setColor(Color.yellow);
+		g.setColor(Color.black);
 		g.fillRect(0, 0, getRealWidth(), getRealHeight());
 		
-		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
+		Font font = new Font("Colonna MT", Font.PLAIN, 20 * Game.SCALE);
 		g.setFont(font);
-		g.setColor(Color.pink);
+		g.setColor(Color.white);
 		drawCenteredString("WELCOME " , getRealWidth(), getRealHeight(), g);
 
 	}

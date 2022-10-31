@@ -83,7 +83,7 @@ public class Bomb extends AnimatedEntitiy {
         for (int i = 0; i < _flames.length; i++) {
             _flames[i] = new uet.oop.bomberman.entities.bomb.Flame((int) _x, (int) _y, i, Game.getBombRadius(), _board);
         }
-        Sound.play("BOM_11_M");
+        Sound.play("explode");
     }
     public void time_explode() {
         _timeToExplode = 0;
